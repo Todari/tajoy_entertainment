@@ -1,18 +1,26 @@
 {
-  "extends": "@repo/typescript-config/nextjs.json",
+  "extends": "@tajoy-ent/typescript-config/nextjs.json",
   "compilerOptions": {
+    "paths": {
+      "_panda/*": ["./styled-system/*"],
+      "@/*": ["./src/*"]
+    },
+    "types": ["@pandacss/dev"],
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "allowJs": true,
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
     "next.config.mjs",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "styled-system"
   ],
   "exclude": ["node_modules"]
 }

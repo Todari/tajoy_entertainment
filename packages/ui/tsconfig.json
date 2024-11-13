@@ -1,8 +1,12 @@
 {
-  "extends": "@repo/typescript-config/react-library.json",
+  "extends": "@tajoy-ent/typescript-config/react-library.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "paths": {
+      "_panda/*": ["./styled-system/*"]
+    },
+    "types": ["@pandacss/dev"]
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "outDir": "dist",
+  "include": ["src", "**/*.ts", "**/*.tsx", "styled-system"],
+  "exclude": ["node_modules"]
 }

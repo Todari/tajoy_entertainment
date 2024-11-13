@@ -36,3 +36,9 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+
+*storybook.log
+
+## Panda
+styled-system
+styled-system-studio
