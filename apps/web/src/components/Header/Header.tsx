@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { NavButton } from "../NavButton";
 import { TajoyLogo } from "@tajoy-ent/ui";
 import { headerStyle, headerContentStyle, headerNavStyle } from "./Header.style";
@@ -11,43 +12,49 @@ export function Header() {
   return (
     <header className={headerStyle}>
       <div className={headerContentStyle}>
-      <TajoyLogo color="white" onClick={() => window.location.href = "/"}/>
+      <Link href="/" prefetch={true}>
+        <TajoyLogo color="white" />
+      </Link>
       <div className={headerNavStyle}>
-        <NavButton 
-          selected={pathname === "/company"}
+        <Link href="/company" prefetch={true}>
+          <NavButton 
+            selected={pathname === "/company"}
+          >
+            COMPANY
+          </NavButton>
+        </Link>
+        <Link href="/production" prefetch={true}>
+          <NavButton 
+            selected={pathname === "/production"}
           type="button" 
-          onClick={() => window.location.href = "/company"}
         >
-          COMPANY
-        </NavButton>
-        <NavButton 
-          selected={pathname === "/production"}
+            PRODUCTION
+          </NavButton>
+        </Link>
+        <Link href="/artists" prefetch={true}>
+          <NavButton 
+            selected={pathname === "/artists"}
           type="button" 
-          onClick={() => window.location.href = "/production"}
-        >
-          PRODUCTION
-        </NavButton>
-        <NavButton 
-          selected={pathname === "/artists"}
-          type="button" 
-          onClick={() => window.location.href = "/artists"}
         >
           ARTISTS
-        </NavButton>
-        <NavButton 
-          selected={pathname === "/news"}
+          </NavButton>
+        </Link>
+        <Link href="/news" prefetch={true}>
+          <NavButton 
+            selected={pathname === "/news"}
           type="button" 
-          onClick={() => window.location.href = "/news"}
         >
           NEWS
-        </NavButton>
-        <NavButton 
-          selected={pathname === "/audition"}
+          </NavButton>
+        </Link>
+        <Link href="/audition" prefetch={true}>
+          <NavButton 
+            selected={pathname === "/audition"}
           type="button" 
-          onClick={() => window.location.href = "/audition"}
         >
           AUDITION
-        </NavButton>
+          </NavButton>
+        </Link>
       </div>
       </div>
     </header>

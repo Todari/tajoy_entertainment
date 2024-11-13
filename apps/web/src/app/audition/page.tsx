@@ -1,9 +1,7 @@
-import { Header } from "@/components/Header/Header";
-
 export default function AuditionPage() {
   return (
-    <>
-      <Header />
-    </>
+    <main>
+      <h1>Audition</h1>
+    </main>
   );
 }

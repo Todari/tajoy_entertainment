@@ -1,9 +1,7 @@
-import { Header } from "@/components/Header/Header";
-
 export default function CompanyPage() {
   return (
-    <>
-      <Header />
-    </>
+    <main>
+      <h1>Company</h1>
+    </main>
   );
 }

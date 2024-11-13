@@ -1,9 +1,7 @@
-import { Header } from "@/components/Header/Header";
-
 export default function ArtistsPage() {
   return (
-    <>
-      <Header />
-    </>
+    <main>
+      <h1>Artists</h1>
+    </main>
   );
 }

@@ -1,9 +1,7 @@
-import { Header } from "@/components/Header/Header";
-
 export default function ProductionPage() {
   return (
-    <>
-      <Header />
-    </>
+    <main>
+      <h1>Production</h1>
+    </main>
   );
 }
