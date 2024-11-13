@@ -6,7 +6,6 @@ export const buttonStyle = cva({
     alignItems: 'center',
     justifyContent: 'center',
     cursor: 'pointer',
-    borderRadius: 'md',
     transition: 'all 0.2s',
     _disabled: {
       cursor: 'not-allowed',

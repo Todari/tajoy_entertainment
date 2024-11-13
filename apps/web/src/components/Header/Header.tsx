@@ -1,20 +1,53 @@
 "use client"
 
-import { Button, TajoyLogo } from "@tajoy-ent/ui";
+import { NavButton } from "../NavButton";
+import { TajoyLogo } from "@tajoy-ent/ui";
 import { headerStyle, headerContentStyle, headerNavStyle } from "./Header.style";
+import { usePathname } from "next/navigation";
 
 export function Header() {
+  const pathname = usePathname();
 
   return (
     <header className={headerStyle}>
       <div className={headerContentStyle}>
-      <TajoyLogo color="white" />
+      <TajoyLogo color="white" onClick={() => window.location.href = "/"}/>
       <div className={headerNavStyle}>
-        <Button variant="ghost" type="button">COMPANY</Button>
-        <Button variant="ghost" type="button">PRODUCTION</Button>
-        <Button variant="ghost" type="button">ARTISTS</Button>
-        <Button variant="ghost" type="button">NEWS</Button>
-        <Button variant="ghost" type="button">AUDITION</Button>
+        <NavButton 
+          selected={pathname === "/company"}
+          type="button" 
+          onClick={() => window.location.href = "/company"}
+        >
+          COMPANY
+        </NavButton>
+        <NavButton 
+          selected={pathname === "/production"}
+          type="button" 
+          onClick={() => window.location.href = "/production"}
+        >
+          PRODUCTION
+        </NavButton>
+        <NavButton 
+          selected={pathname === "/artists"}
+          type="button" 
+          onClick={() => window.location.href = "/artists"}
+        >
+          ARTISTS
+        </NavButton>
+        <NavButton 
+          selected={pathname === "/news"}
+          type="button" 
+          onClick={() => window.location.href = "/news"}
+        >
+          NEWS
+        </NavButton>
+        <NavButton 
+          selected={pathname === "/audition"}
+          type="button" 
+          onClick={() => window.location.href = "/audition"}
+        >
+          AUDITION
+        </NavButton>
       </div>
       </div>
     </header>
