@@ -2,7 +2,6 @@ import { cva } from '_panda/css'
 
 export const buttonStyle = cva({
   base: {
-    display: 'block',
     alignItems: 'center',
     justifyContent: 'center',
     cursor: 'pointer',
